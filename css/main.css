@@ -208,6 +208,7 @@ header .list ul li a:hover {
 .landing {
     height: 87vh;
     background: linear-gradient(to right, #f2f7fd 50%, #1d1e31 45%);
+    position: relative;
 }
 
 @media (max-width: 768px) {
@@ -241,12 +242,17 @@ header .list ul li a:hover {
     flex-basis: 50%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 @media (max-width: 768px) {
     .landing .content .text {
         margin-bottom: 50px;
     }
+}
+
+.landing .content .text .words {
+    position: relative;
 }
 
 .landing .content .text h2 {
@@ -352,6 +358,45 @@ header .list ul li a:hover {
     .landing .content .image img {
         width: 80%;
     }
+}
+
+.landing .arrow {
+    position: absolute;
+    font-size: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .landing .arrow {
+        display: none;
+    }
+}
+
+.landing .arrow.right {
+    background-color: #f2f7fd;
+    top: 0;
+}
+
+.landing .arrow.left {
+    background-color: #1d1e31;
+    color: white;
+    bottom: 10%;
 }
 
 /* End Landing */

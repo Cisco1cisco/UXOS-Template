@@ -4,6 +4,7 @@
     --main-color: #8547ca;
     --title-color: #1d1e31;
     --para-color: #0c0c0c;
+    --section-padd: 50px;
     --tran-dur: 0.3s;
 }
 
@@ -64,6 +65,51 @@ ul {
 /* End Global Rules */
 
 /* Start Component */
+
+h2.main-title {
+    text-align: center;
+    font-size: 32px;
+    color: var(--title-color, #1d1e31);
+    position: relative;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 50px;
+}
+
+h2.main-title::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background-color: var(--main-color, #8547ca);
+}
+
+a.used {
+    display: block;
+    background-color: var(--main-color, #8547ca);
+    width: fit-content;
+    color: white;
+    padding: 15px 40px;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+}
+
+a.used:hover {
+    background-color: white;
+    outline: 1px solid var(--main-color, #8547ca);
+    color: var(--main-color, #8547ca);
+}
+
 /* End Component */
 
 /* Start Header */
@@ -309,3 +355,82 @@ header .list ul li a:hover {
 }
 
 /* End Landing */
+
+/* Start Features */
+
+.features {
+    margin-top: 100px;
+    padding-top: var(--section-padd, 50px);
+    padding-bottom: var(--section-padd, 50px);
+    font-family: 'Poppins', sans-serif;
+}
+
+.features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.features .container .box {
+    flex-basis: calc((100% / 3) - 30px);
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .features .container .box {
+        flex-basis: 90%;
+    }
+}
+
+.features .container .box:hover {
+    background-color: var(--main-color, #8547ca);
+    color: white;
+}
+
+.features .container .box .head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.features .container .box .head i {
+    color: var(--main-color, #8547ca);
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.features .container .box:hover i {
+    color: white;
+}
+
+.features .container .box .head h6 {
+    font-size: 18px;
+    color: var(--para-color, #0c0c0c);
+}
+
+.features .container .box:hover .head h6 {
+    color: white;
+}
+
+.features .container .box p {
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--para-color, #0c0c0c);
+}
+
+.features .container .box:hover p {
+    color: white;
+}
+
+.features a.used {
+    margin: 0 auto;
+}
+
+/* End Features */

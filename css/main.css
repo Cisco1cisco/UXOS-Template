@@ -760,3 +760,87 @@ header .list ul li a:hover {
 }
 
 /* End Testimonial */
+
+/* Start Contact */
+
+.contact {
+    padding-top: var(--section-padd, 50px);
+    padding-bottom: var(--section-padd, 50px);
+    background-color: #f2f7fd;
+}
+
+.contact .container h2 {
+    font-size: 26px;
+    margin-bottom: 80px;
+}
+
+.contact .container .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contact .container .content {
+        flex-direction: column;
+    }
+}
+
+.contact .container .content>div {
+    flex-basis: calc((100% / 2) - 30px);
+}
+
+@media (max-width: 768px) {
+    .contact .container .content .form {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+}
+
+.contact .container .content .form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .container .content .form form input,
+.contact .container .content .form form textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent transparent var(--para-color, #0c0c0c) transparent;
+    background-color: #f2f7fd;
+    padding: 5px;
+}
+
+.contact .container .content .form form input:focus,
+.contact .container .content .form form textarea:focus {
+    outline: none;
+}
+
+.contact .container .content .form form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.contact .container .content .form form button {
+    width: fit-content;
+    text-transform: uppercase;
+    background-color: var(--main-color, #8547ca);
+    border: none;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    padding: 20px 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact .container .content .image img {
+    width: 100%;
+}
+
+/* End Contact */

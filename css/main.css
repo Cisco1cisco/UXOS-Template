@@ -722,3 +722,41 @@ header .list ul li a:hover {
 }
 
 /* End Subscribe */
+
+/* Start Testimonial */
+
+.testimonial {
+    padding-top: var(--section-padd, 50px);
+    padding-bottom: var(--section-padd, 50px);
+}
+
+.testimonial .container .head {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.testimonial .container .head>img {
+    margin-right: 20px;
+}
+
+.testimonial .container .head .info img {
+    margin-bottom: 10px;
+}
+
+.testimonial .container .head .info h6 {
+    font-size: 16px;
+    color: var(--main-color, #8547ca);
+    margin-bottom: 10px;
+}
+
+.testimonial .container p {
+    margin-bottom: 20px;
+    color: var(--para-color, #0c0c0c);
+    line-height: 1.5;
+}
+
+.testimonial .container a {
+    margin-left: auto;
+}
+
+/* End Testimonial */

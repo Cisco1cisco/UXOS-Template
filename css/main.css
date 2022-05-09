@@ -844,3 +844,152 @@ header .list ul li a:hover {
 }
 
 /* End Contact */
+
+/* Start Footer */
+
+footer {
+    background-color: #363636;
+    color: white;
+    padding-top: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .up .main-title {
+    color: white;
+}
+
+footer .up .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    footer .up .container {
+        flex-direction: column;
+    }
+}
+
+footer .up .container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    width: 80%;
+    height: 1px;
+    background-color: #898989;
+}
+
+footer .up .container .item {
+    flex-basis: calc((100% / 4) - 30px);
+}
+
+@media (max-width: 768px) {
+    footer .up .container .item {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+footer .up .container .item h5 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+footer .up .container .item p {
+    line-height: 1.5;
+}
+
+footer .up .container .item.list ul li a {
+    display: block;
+    padding: 5px 10px;
+    color: white;
+    transition: var(--tran-dur, 0.3s);
+    -webkit-transition: var(--tran-dur, 0.3s);
+    -moz-transition: var(--tran-dur, 0.3s);
+    -ms-transition: var(--tran-dur, 0.3s);
+    -o-transition: var(--tran-dur, 0.3s);
+}
+
+footer .up .container .item.list ul li a:hover {
+    color: var(--main-color, #8547ca);
+}
+
+footer .up .container .item.form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    footer .up .container .item.form input {
+        width: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    footer .up .container .item.form input {
+        width: 60%;
+    }
+}
+
+footer .up .container .item.form button {
+    border: none;
+    background-color: var(--main-color, #8547ca);
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+footer .up .socials {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .up .socials .icon {
+    background-color: #f1f2f3;
+    color: #363636;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+footer .down {
+    padding: 20px 5px;
+    background-color: var(--main-color, #8547ca);
+}
+
+footer .down p {
+    text-align: center;
+    line-height: 1.5;
+}
+
+footer .down a {
+    cursor: pointer;
+    color: white;
+}
+
+/* End Footer */
